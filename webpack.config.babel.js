@@ -28,6 +28,7 @@ export default {
 
     resolve: {
         alias: {
+            '@config': path.resolve(__dirname, 'config'),
             '@scripts': path.resolve(__dirname, 'src/js'),
             '@styles': path.resolve(__dirname, 'src/scss'),
             '@': path.resolve(__dirname, 'src')
