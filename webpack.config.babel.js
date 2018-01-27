@@ -1,6 +1,7 @@
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
+import ExtractTextWebpackPlugin from 'extract-text-webpack-plugin'
 
 export default {
 
@@ -17,14 +18,25 @@ export default {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /.(css|scss)$/,
+                loader: ExtractTextWebpackPlugin.extract('css-loader!sass-loader')
             }
         ]
     },
 
-    resolve: {},
+    resolve: {
+        alias: {
+            '@scripts': path.resolve(__dirname, 'src/js'),
+            '@styles': path.resolve(__dirname, 'src/scss'),
+            '@': path.resolve(__dirname, 'src')
+        }
+    },
 
     plugins: [
         new CleanWebpackPlugin(['public']),
+        new ExtractTextWebpackPlugin('css/app.bundle.css'),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/index.html')
         })
