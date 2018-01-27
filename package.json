@@ -2,12 +2,11 @@
   "name": "moments",
   "version": "1.0.0",
   "description": "Moments application is a location for share your good moments with all peoples in world.",
-  "main": "src/index.js",
   "author": "Vitor Leonel <falecom@vitorleonel.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "watch": "webpack --watch --hide-modules"
+    "watch": "webpack-dev-server"
   },
   "dependencies": {
     "react": "^16.2.0",
@@ -16,7 +15,12 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
-    "webpack": "^3.10.0"
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
