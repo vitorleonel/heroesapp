@@ -1,3 +1,3 @@
-# Moments App
+# Heroes App
 
-O aplicativo **Moments** é um local para compartilhar seus bons momentos com todos os povos do mundo.
+O aplicativo **Heroes** é um local para conhecer seus heróis favoritos da Marvel.
