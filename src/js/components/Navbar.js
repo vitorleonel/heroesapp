@@ -1,26 +1,47 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
+import Login from './Login'
 
-class Navbar extends PureComponent {
+class Navbar extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            loginModal: false
+        }
+
+        this.handlerLoginModal = this.handlerLoginModal.bind(this)
+    }
+
+    handlerLoginModal() {
+        this.setState({
+            loginModal: !this.state.loginModal
+        })
+    }
 
     render() {
         return(
-            <nav className="navbar has-shadow">
-                <div className="container">
+            <header>
+                <nav className="navbar has-shadow">
+                    <div className="container">
 
-                    <div className="navbar-brand">
-                        <a href="/" className="navbar-item">
-                            <span className="title is-5">{this.props.title}</span>
-                        </a>
-                    </div>
-
-                    <div className="navbar-menu">
-                        <div className="navbar-end">
-                            <a href="" className="navbar-item">Entrar</a>
+                        <div className="navbar-brand">
+                            <a href="/" className="navbar-item">
+                                <span className="title is-5">{this.props.title}</span>
+                            </a>
                         </div>
-                    </div>
 
-                </div>
-            </nav>
+                        <div className="navbar-menu">
+                            <div className="navbar-end">
+                                <a href="javascript:;" className="navbar-item" onClick={this.handlerLoginModal}>Entrar</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+
+                <Login isActive={this.state.loginModal} close={this.handlerLoginModal} />
+            </header>
         )
     }
 
