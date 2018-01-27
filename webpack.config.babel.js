@@ -1,4 +1,5 @@
 import path from 'path'
+import config from './config'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import ExtractTextWebpackPlugin from 'extract-text-webpack-plugin'
@@ -39,6 +40,7 @@ export default {
         new CleanWebpackPlugin(['public']),
         new ExtractTextWebpackPlugin('css/app.bundle.css'),
         new HtmlWebpackPlugin({
+            title: config.app.title,
             template: path.resolve(__dirname, 'src/index.html')
         })
     ]
