@@ -9,6 +9,11 @@
 @import "variables";
 
 /**
-  Components
+  Bulma
  */
-@import "components/general";
+@import "~bulma/bulma";
+
+/**
+  Custom
+ */
+@import "custom/navbar";
