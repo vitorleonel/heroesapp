@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 
 class Hero extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this.handlerShowSingleHero = this.handlerShowSingleHero.bind(this)
+    }
+
+    handlerShowSingleHero() {
+        this.props.history.push('/heroes/' + this.props.hero.id)
+    }
 
     render() {
         return (
             <div className="card">
-                <div className="card-image">
+                <div className="card-image" onClick={this.handlerShowSingleHero}>
                     <figure className="image is-4by3">
                         <img src={this.props.hero.thumbnail.path + '.' + this.props.hero.thumbnail.extension} alt="Placeholder image" />
                     </figure>
@@ -27,4 +38,4 @@ class Hero extends Component {
 
 }
 
-export default Hero
+export default withRouter(Hero)

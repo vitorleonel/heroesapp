@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Login from './Login'
 
 class Navbar extends Component {
@@ -26,9 +27,9 @@ class Navbar extends Component {
                     <div className="container">
 
                         <div className="navbar-brand">
-                            <a href="/" className="navbar-item">
+                            <Link to="/" className="navbar-item">
                                 <span className="title is-5">{this.props.title}</span>
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="navbar-menu">
