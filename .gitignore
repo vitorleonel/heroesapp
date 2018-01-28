@@ -1,5 +1,7 @@
-/.idea
 /node_modules
 /public
 /config/index.js
+.idea
+.firebaserc
+firebase.json
 yarn.lock
