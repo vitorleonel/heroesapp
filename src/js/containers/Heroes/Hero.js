@@ -16,7 +16,7 @@ class Hero extends Component {
     render() {
         return (
             <div className="card">
-                <div className="card-image" onClick={this.handlerShowSingleHero}>
+                <div className="card-image" style={{cursor: 'pointer'}} onClick={this.handlerShowSingleHero}>
                     <figure className="image is-4by3">
                         <img src={this.props.hero.thumbnail.path + '.' + this.props.hero.thumbnail.extension} alt={this.props.hero.name} />
                     </figure>
