@@ -4,6 +4,7 @@ import config from '@config'
 
 import Navbar from './Navbar'
 import Heroes from '@scripts/containers/Heroes/Heroes'
+import Hero from '@scripts/containers/Hero/Hero'
 
 class App extends Component {
 
@@ -13,7 +14,8 @@ class App extends Component {
                 <Navbar title={config.app.title} />
 
                 <div className="container">
-                    <Route path="/" component={ Heroes } exact />
+                    <Route path="/" exact component={ Heroes } />
+                    <Route path="/heroes/:hero" component={ Hero } />
                 </div>
             </div>
         )

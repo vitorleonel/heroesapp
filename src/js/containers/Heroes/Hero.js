@@ -18,7 +18,7 @@ class Hero extends Component {
             <div className="card">
                 <div className="card-image" onClick={this.handlerShowSingleHero}>
                     <figure className="image is-4by3">
-                        <img src={this.props.hero.thumbnail.path + '.' + this.props.hero.thumbnail.extension} alt="Placeholder image" />
+                        <img src={this.props.hero.thumbnail.path + '.' + this.props.hero.thumbnail.extension} alt={this.props.hero.name} />
                     </figure>
                 </div>
 
