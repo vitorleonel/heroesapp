@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "watch": "webpack-dev-server"
+    "watch": "webpack-dev-server",
+    "build": "webpack"
   },
   "dependencies": {
     "axios": "^0.17.1",
