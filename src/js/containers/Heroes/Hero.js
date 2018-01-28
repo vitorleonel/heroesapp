@@ -25,11 +25,6 @@ class Hero extends Component {
                 <div className="card-content">
                     <div className="content">
                         <p className="title is-5">{this.props.hero.name}</p>
-                        <span className="subtitle">
-                            <div><strong>{this.props.hero.stories.available}</strong> histórias</div>
-                            <div><strong>{this.props.hero.series.available}</strong> séries</div>
-                            <div><strong>{this.props.hero.comics.available}</strong> histórias em quadrinhos</div>
-                        </span>
                     </div>
                 </div>
             </div>
